@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className='container'>
+        <div className='titleBox'>
+          <span className='title'>react-todo-app</span>
+          <button className='add-todo-btn'>추가</button>
+        </div>
+        
+        <div className='todo-list'>
+          <div className='todo'>
+            <input type='checkbox' defaultChecked={false}></input>
+            <span>할 일 1</span>
+            <button className='del-todo-btn'>삭제</button>
+          </div>
+        </div>
+
+        <input className='input' type='text' placeholder='할일을 입력'></input>
+      </div>
     </div>
   );
 }
