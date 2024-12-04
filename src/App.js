@@ -29,7 +29,7 @@ function App() {
 
   const handleDelBtn = (id) => {
     console.log('id : @!@#!@', id);
-    const newTodos =  todos.filter((todo) => todo.id === id);
+    const newTodos =  todos.filter((todo) => todo.id !== id);
 
     setTodos(newTodos);
   }
