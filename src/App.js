@@ -34,13 +34,17 @@ function App() {
     setTodos(newTodos);
   }
 
+  const handleAllClear = () => {
+    setTodos([]);
+  }
+
 
   return (
     <div>
       <div className='container'>
         <div className='titleBox'>
           <span className='title'>react-todo-app</span>
-          <button className='clear-btn'>전부 삭제</button>
+          <button onClick={() => handleAllClear()} className='clear-btn'>전부 삭제</button>
         </div>
         
         <div className='todo-list'>
