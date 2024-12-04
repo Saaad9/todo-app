@@ -17,7 +17,6 @@ function App() {
   ]);
   
   const handleClicked = (id) => {
-  
   //  id에 해당하는 요소의 completed를 변경
    todos.filter((todo) => {
       if(todo.id === id) {
@@ -26,6 +25,13 @@ function App() {
    })
    
    setTodos([...todos]);
+  }
+
+  const handleDelBtn = (id) => {
+    console.log('id : @!@#!@', id);
+    const newTodos =  todos.filter((todo) => todo.id === id);
+
+    setTodos(newTodos);
   }
 
 
@@ -49,7 +55,7 @@ function App() {
               ></input>
 
               <span>{todo.text}</span>
-              <button className='del-todo-btn'>삭제</button>
+              <button onClick={() => handleDelBtn(todo.id)} className='del-todo-btn'>삭제</button>
             </div>
           ))}
         </div>
