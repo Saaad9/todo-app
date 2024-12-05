@@ -1,4 +1,5 @@
 import './App.css';
+import './reset.css';
 import React, { useState, useEffect, useRef } from 'react';
 import TodoCompo from './components/TodoCompo';
 import InputCompo from './components/InputCompo';
