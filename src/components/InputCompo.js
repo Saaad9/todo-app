@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Input({ value, setValue, handleAddTodo }) {
+export default function Input({ value, setValue, handleAddTodo, input_focus }) {
     const handleKeyUp = (e) => {
         if (e.key === 'Enter') {
             handleAddTodo();
@@ -16,6 +16,7 @@ export default function Input({ value, setValue, handleAddTodo }) {
 
     return (
         <input
+            ref={input_focus}
             className='input'
             type='text'
             value={value}
